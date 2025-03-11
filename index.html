@@ -3,69 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>High Volts Inventory</title>
+    <title>High Volts - Music Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-
-    <h1>High Volts - Inventory</h1>
-
-    <h2>Add New Product</h2>
-    <input type="text" id="name" placeholder="Product Name">
-    <input type="text" id="category" placeholder="Category (Instrument/Accessory)">
-    <input type="text" id="brand" placeholder="Brand">
-    <input type="number" id="price" placeholder="Price">
-    <input type="number" id="stock" placeholder="Stock">
-    <button onclick="addProduct()">Add Product</button>
-
-    <h2>Product List</h2>
-    <div id="productList"></div>
-
-    <script>
-        const apiUrl = "http://localhost:3000/products";
-
-        // Fetch and display products
-        function fetchProducts() {
-            fetch(apiUrl)
-                .then(response => response.json())
-                .then(products => {
-                    let productList = document.getElementById("productList");
-                    productList.innerHTML = "";
-                    products.forEach(product => {
-                        let productDiv = document.createElement("div");
-                        productDiv.innerHTML = `
-                            <p><strong>${product.name}</strong> (${product.category}) - ${product.brand} - $${product.price} - Stock: ${product.stock}</p>
-                            <button onclick="deleteProduct(${product.id})">Delete</button>
-                        `;
-                        productList.appendChild(productDiv);
-                    });
-                });
-        }
-
-        // Add a new product
-        function addProduct() {
-            let name = document.getElementById("name").value;
-            let category = document.getElementById("category").value;
-            let brand = document.getElementById("brand").value;
-            let price = document.getElementById("price").value;
-            let stock = document.getElementById("stock").value;
-
-            let newProduct = { name, category, brand, price, stock };
-
-            fetch(apiUrl, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(newProduct)
-            }).then(() => fetchProducts());
-        }
-
-        // Delete a product
-        function deleteProduct(productId) {
-            fetch(`${apiUrl}/${productId}`, { method: "DELETE" })
-                .then(() => fetchProducts());
-        }
-
-        window.onload = fetchProducts;
-    </script>
-
+    <header>
+        <h1>High Volts</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <h2>Welcome to High Volts</h2>
+        <p>Your one-stop shop for the best musical instruments and accessories.</p>
+    </section>
+    
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product">
+            <h3>Acoustic Guitar</h3>
+            <p>$199</p>
+            <button onclick="addToCart('Acoustic Guitar', 199)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>Electric Guitar</h3>
+            <p>$299</p>
+            <button onclick="addToCart('Electric Guitar', 299)">Add to Cart</button>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: contact@highvolts.com</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 High Volts. All rights reserved.</p>
+    </footer>
 </body>
 </html>
