@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Volts Inventory</title>
+</head>
+<body>
+
+    <h1>High Volts - Inventory</h1>
+
+    <h2>Add New Product</h2>
+    <input type="text" id="name" placeholder="Product Name">
+    <input type="text" id="category" placeholder="Category (Instrument/Accessory)">
+    <input type="text" id="brand" placeholder="Brand">
+    <input type="number" id="price" placeholder="Price">
+    <input type="number" id="stock" placeholder="Stock">
+    <button onclick="addProduct()">Add Product</button>
+
+    <h2>Product List</h2>
+    <div id="productList"></div>
+
+    <script>
+        const apiUrl = "http://localhost:3000/products";
+
+        // Fetch and display products
+        function fetchProducts() {
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(products => {
+                    let productList = document.getElementById("productList");
+                    productList.innerHTML = "";
+                    products.forEach(product => {
+                        let productDiv = document.createElement("div");
+                        productDiv.innerHTML = `
+                            <p><strong>${product.name}</strong> (${product.category}) - ${product.brand} - $${product.price} - Stock: ${product.stock}</p>
+                            <button onclick="deleteProduct(${product.id})">Delete</button>
+                        `;
+                        productList.appendChild(productDiv);
+                    });
+                });
+        }
+
+        // Add a new product
+        function addProduct() {
+            let name = document.getElementById("name").value;
+            let category = document.getElementById("category").value;
+            let brand = document.getElementById("brand").value;
+            let price = document.getElementById("price").value;
+            let stock = document.getElementById("stock").value;
+
+            let newProduct = { name, category, brand, price, stock };
+
+            fetch(apiUrl, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(newProduct)
+            }).then(() => fetchProducts());
+        }
+
+        // Delete a product
+        function deleteProduct(productId) {
+            fetch(`${apiUrl}/${productId}`, { method: "DELETE" })
+                .then(() => fetchProducts());
+        }
+
+        window.onload = fetchProducts;
+    </script>
+
+</body>
+</html>
