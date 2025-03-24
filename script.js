@@ -1,14 +1,13 @@
 // script.js
-let cart = [];
 
-function addToCart(productName, price) {
-    cart.push({ name: productName, price: price });
-    alert(`${productName} has been added to your cart!`);
-    updateCart();
-}
-
-function updateCart() {
-    console.log("Cart:", cart);
+function showProductPage(productType) {
+    if (productType === 'Acoustic Guitars') {
+        window.location.href = 'acoustic-guitars.html';
+    } else if (productType === 'Electric Guitars') {
+        window.location.href = 'electric-guitars.html';
+    } else if (productType === 'Accessories') {
+        window.location.href = 'accessories.html';
+    }
 }
 
 document.addEventListener("DOMContentLoaded", function () {

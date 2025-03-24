@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>High Volts - Guitar Shop</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
 <body>
@@ -21,30 +21,25 @@
     
     <section id="home">
         <h2>Welcome to High Volts Guitar Shop</h2>
-        <p>Your one-stop shop for the best priced Guitars and their accessories.</p>
+        <p>Your one-stop shop for the best-priced Guitars and their accessories.</p>
     </section>
     
     <section id="products">
         <h2>Our Products</h2>
         <div class="product">
-            <h3>Taylor Acoustic Guitar</h3>
-            <p>$199</p>
-            <button onclick="addToCart('Acoustic Guitar', 199)">Add to Cart</button>
+            <h3>Acoustic Guitars</h3>
+            <p>$199 - $799</p>
+            <button onclick="showProductPage('Acoustic Guitars')">Click for More</button>
         </div>
         <div class="product">
-            <h3>Gibson Electric Guitar</h3>
-            <p>$299</p>
-            <button onclick="addToCart('Electric Guitar', 299)">Add to Cart</button>
+            <h3>Electric Guitars</h3>
+            <p>$299 - $999</p>
+            <button onclick="showProductPage('Electric Guitars')">Click for More</button>
         </div>
         <div class="product">
-            <h3>Pick</h3>
-            <p>$1</p>
-            <button onclick="addToCart('Pick', 1)">Add to Cart</button>
-        </div>
-        <div class="product">
-            <h3>Capo</h3>
-            <p>$15</p>
-            <button onclick="addToCart('Capo', 15)">Add to Cart</button>
+            <h3>Accessories</h3>
+            <p>$1 - $30</p>
+            <button onclick="showProductPage('Accessories')">Click for More</button>
         </div>
     </section>
     
@@ -52,8 +47,7 @@
         <h2>Contact Us</h2>
         <p>Phone: 087 002 6796</p>
         <p>Email: Highvoltguitars@gmail.com</p>
-        <p>Address: Ninth LockRoad, Clondalkin, Dublin 22</p>
-        
+        <p>Address: Ninth Lock Road, Clondalkin, Dublin 22</p>
     </section>
     
     <footer>
