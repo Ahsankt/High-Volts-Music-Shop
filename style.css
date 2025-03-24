@@ -4,10 +4,25 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    background-image: url('guitar-background.jpg'); /* Add your guitar image file here */
+    background-image: url('main-bg.jpg'); /* Default background for main page */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+}
+
+/* Ensure the main page retains its background */
+body.main {
+    background-image: url('guitar-background.jpg');
+}
+
+/* Background for Acoustic Guitars page */
+body.acoustic {
+    background-image: url('acoustic-guitar-bg.jpg') !important;
+}
+
+/* Background for Electric Guitars page */
+body.electric {
+    background-image: url('electric-guitar-bg.jpg') !important;
 }
 
 header {
