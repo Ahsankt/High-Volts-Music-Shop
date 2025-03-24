@@ -18,12 +18,12 @@ body.main {
 }
 
 /* Background for Acoustic Guitar page */
-body.acoustic {
+body.acoustic-guitar {
     background-image: url('Acoustic.jpg');
 }
 
 /* Background for Electric Guitar page */
-body.electric {
+body.electric-guitar {
     background-image: url('Electric.jpg');
 }
 
