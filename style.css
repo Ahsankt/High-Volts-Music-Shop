@@ -10,17 +10,17 @@ body {
     background-attachment: fixed;
 }
 
-/* Ensure the main page retains its background */
+
 body.main {
     background-image: url('guitar-background.jpg');
 }
 
-/* Background for Acoustic Guitars page */
+
 body.acoustic {
     background-image: url('acoustic-guitar-bg.jpg') !important;
 }
 
-/* Background for Electric Guitars page */
+
 body.electric {
     background-image: url('electric-guitar-bg.jpg') !important;
 }
