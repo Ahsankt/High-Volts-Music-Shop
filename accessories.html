@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessories - High Volts</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Accessories</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="product-details">
+        <h2>Our Accessories</h2>
+        <div class="product">
+            <img src="accessory1.jpg" alt="Guitar Picks" class="accessory-image">
+            <h3>Guitar Picks (Pack of 10)</h3>
+            <p>Price: $5</p>
+            <button onclick="buyNow('Guitar Picks', 5)">Buy Now</button>
+            <button onclick="addToCart('Guitar Picks', 5)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="accessory2.jpg" alt="Guitar Strap" class="accessory-image">
+            <h3>Leather Guitar Strap</h3>
+            <p>Price: $20</p>
+            <button onclick="buyNow('Leather Guitar Strap', 20)">Buy Now</button>
+            <button onclick="addToCart('Leather Guitar Strap', 20)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="accessory3.jpg" alt="Guitar Tuner" class="accessory-image">
+            <h3>Clip-On Guitar Tuner</h3>
+            <p>Price: $15</p>
+            <button onclick="buyNow('Clip-On Guitar Tuner', 15)">Buy Now</button>
+            <button onclick="addToCart('Clip-On Guitar Tuner', 15)">Add to Cart</button>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 High Volts. All rights reserved.</p>
+    </footer>
+</body>
+</html>
