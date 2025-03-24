@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Guitars - High Volts</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Electric Guitars</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="product-details">
+        <h2>Our Electric Guitars</h2>
+        <div class="product">
+            <img src="electric1.jpg" alt="Electric Guitar 1" class="guitar-image">
+            <h3>Gibson Les Paul</h3>
+            <p>Price: $999</p>
+            <button onclick="buyNow('Gibson Les Paul', 999)">Buy Now</button>
+            <button onclick="addToCart('Gibson Les Paul', 999)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="electric2.jpg" alt="Electric Guitar 2" class="guitar-image">
+            <h3>Fender Stratocaster</h3>
+            <p>Price: $899</p>
+            <button onclick="buyNow('Fender Stratocaster', 899)">Buy Now</button>
+            <button onclick="addToCart('Fender Stratocaster', 899)">Add to Cart</button>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 High Volts. All rights reserved.</p>
+    </footer>
+</body>
+</html>
