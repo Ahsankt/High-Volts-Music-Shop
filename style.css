@@ -1,30 +1,30 @@
-/* styles.css */
+/* General body styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    background-image: url('main-bg.jpg'); /* Default background for main page */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    transition: background 0.5s ease-in-out;
 }
 
-
+/* Default background for the main page */
 body.main {
     background-image: url('guitar-background.jpg');
 }
 
-
+/* Background for Acoustic Guitar page */
 body.acoustic {
-    background-image: url('acoustic-guitar-bg.jpg') !important;
+    background-image: url('Acoustic.jpg');
 }
 
-
+/* Background for Electric Guitar page */
 body.electric {
-    background-image: url('electric-guitar-bg.jpg') !important;
+    background-image: url('Electric.jpg');
 }
 
+/* Header Styles */
 header {
     background: rgba(51, 51, 51, 0.8);
     color: #fff;
@@ -32,9 +32,11 @@ header {
     text-align: center;
 }
 
+/* Navigation Styles */
 nav ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 nav ul li {
@@ -45,43 +47,60 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section Styles */
 section {
     padding: 20px;
     text-align: center;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     margin: 20px;
     border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Product Box Styles */
 .product {
     background: #fff;
-    padding: 15px;
-    margin: 10px;
+    padding: 20px;
+    margin: 15px;
     display: inline-block;
     border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
 }
 
+.product:hover {
+    transform: scale(1.05);
+}
+
+/* Button Styles */
 button {
     background: #ff6600;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 12px;
     cursor: pointer;
     border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s ease;
 }
 
 button:hover {
     background: #cc5200;
 }
 
+/* Footer Styles */
 footer {
     background: rgba(51, 51, 51, 0.8);
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     position: relative;
     bottom: 0;
     width: 100%;
