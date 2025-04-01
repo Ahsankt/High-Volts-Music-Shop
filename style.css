@@ -62,9 +62,9 @@ nav ul li {
     display: inline;
     margin: 0 15px;
 }
-
+/* Home button section font */
 nav ul li a {
-    color: white;
+    color: rgba(255, 255, 255, 0.786);
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
@@ -73,14 +73,14 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline;
-    color: #ffcc00;
+    color: #ff5500;
 }
 
-/* Section Styles */
+/* Mid White Section Styling */
 section {
     padding: 20px;
     text-align: center;
-    background: rgba(255, 255, 255, 0.792);
+    background: rgba(255, 255, 255, 0.66);
     margin: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -90,7 +90,7 @@ section h2 {
     font-family: 'Playfair Display', serif;
     font-size: 32px;
     font-weight: 700;
-    color: #3f2616f9;
+    color: #2c1306f9;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -100,7 +100,7 @@ section h3 {
     font-family: 'Playfair Display', serif;
     font-size: 18px;
     font-weight: 800;
-    color: #272422f9;
+    color: #1a0b05f9;    
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);

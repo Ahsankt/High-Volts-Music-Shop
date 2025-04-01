@@ -40,14 +40,30 @@
         </div>
         
         <div class="product">
-            <img src="Yamaha.jpeg" alt="Acoustic Guitar 2" class="guitar-image">
+            <img src="Yamaha.jpeg" alt="Acoustic Guitar 3" class="guitar-image">
             <h3>Yamaha F310</h3>
             <p>Price: $249</p>
             <button onclick="buyNow('Yamaha F310', 249)">Buy Now</button>
             <button onclick="addToCart('Yamaha F310', 249)">Add to Cart</button>
         </div>
+
+        <div class="product">
+            <img src="Epiphone.jpeg" alt="Acoustic Guitar 4" class="guitar-image">
+            <h3>Epiphone SJ-200</h3>
+            <p>Price: $1050</p>
+            <button onclick="buyNow('Epiphone', 1050)">Buy Now</button>
+            <button onclick="addToCart('Epiphone', 1050)">Add to Cart</button>
+        </div>
         
     </section>
+
+
+    <section id="cart" style="display: none; background: rgb(235, 233, 230); padding: 15px; border-radius: 10px;">
+        <h3>Items Added to the Cart</h3>
+        <ul id="cart-items"></ul>
+        <h4 id="cart-total">Total: $0</h4>
+    </section>
+    
     
     <footer>
         <p>&copy; 2025 High Volts. All rights reserved.</p>
