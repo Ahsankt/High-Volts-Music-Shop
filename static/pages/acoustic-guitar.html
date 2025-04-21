@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acoustic Guitars - High Volts</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <script defer src="../script/script.js"></script>
+</head>
+<body class="acoustic-guitar">
+
+    <header>
+        <h1>Acoustic Guitars</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="product-details">
+        <h2>Our Acoustic Guitars</h2>
+        
+        <div class="product">
+            <img src="acoustic1.jpeg" alt="Acoustic Guitar 1" class="guitar-image">
+            <h3 class="name">Fender FA-125</h3>
+            <p class="price">Price: $299</p>
+            <div id="plusminus">
+                <button type="button" class="plus-btn">+</button>
+                <input type="text" value="0" class="input-value"></input>
+                <button class="minus-btn">-</button>
+             </div>
+            <button onclick="sendReq(this)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="Taylor.jpeg" alt="Acoustic Guitar 2" class="guitar-image">
+            <h3 class="name">Taylor 724-CE</h3>
+            <p class="price">Price: $399</p>
+            <div id="plusminus">
+            <button type="button" class="plus-btn">+</button>
+            <input type="text" value="0" class="input-value"></input>
+            <button class="minus-btn">-</button>
+            </div>
+            <button onclick="sendReq(this)">Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <img src="Yamaha.jpeg" alt="Acoustic Guitar 3" class="guitar-image">
+            <h3 class="name">Yamaha F310</h3>
+            <p class="price">Price: $249</p>
+            <div id="plusminus">
+                <button type="button" class="plus-btn">+</button>
+                <input type="text" value="0" class="input-value"></input>
+                <button class="minus-btn">-</button>
+            </div>
+            <button onclick="sendReq(this)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="Epiphone.jpeg" alt="Acoustic Guitar 4" class="guitar-image">
+            <h3 class="name">Epiphone SJ-200</h3>
+            <p class="price">Price: $1050</p>
+            <div id="plusminus">
+                <button type="button" class="plus-btn">+</button>
+                <input type="text" value="0" class="input-value"></input>
+                <button class="minus-btn">-</button>
+            </div>
+            <button onclick="sendReq(this)">Add to Cart</button>
+        </div>
+        
+    </section>
+
+
+    <section id="cart" style="display: none; background: rgb(235, 233, 230); padding: 15px; border-radius: 10px;">
+        <h3>Items Added to the Cart</h3>
+        <ul id="cart-items"></ul>
+        <h4 id="cart-total">Total: $0</h4>
+    </section>
+    
+    
+    <footer>
+        <p>&copy; 2025 High Volts. All rights reserved.</p>
+    </footer>
+<script>
+document.addEventListener("click",(btn)=>{
+    if (btn.target.classList.contains("plus-btn")){
+        let container = btn.target.closest("#plusminus")
+        let input=container.querySelector(".input-value")
+        value=parseInt(input.value);
+        input.value=value+1;
+    }
+    else if(btn.target.classList.contains("minus-btn")){
+        
+      const wrapper = btn.target.closest('#plusminus');
+      const input = wrapper.querySelector('.input-value');
+      let value = parseInt(input.value) || 0;
+      if (value > 0) input.value = value - 1;
+    
+
+    }
+})
+
+</script>
+</body>
+</html>
