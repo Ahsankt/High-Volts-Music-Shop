@@ -1,6 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import fs from 'node:fs'
+import fs, { writeFileSync } from 'node:fs'
 import path from 'node:path';
 
 const express_app=express();
@@ -77,7 +77,18 @@ express_app.use(express.static("../static"))
 
 
 
-
+//deleting 
+express_app.delete("/cartDelete",(req,res)=>{
+const carts=JSON.parse(fs.readFileSync("../backend/userInput.js","utf-8"));
+const {name}=req.body;
+console.log(name)
+let filtered=carts.filter(item=>item.name !==name)
+if(filtered.length===carts.length){
+    return res.status(400).json({message:"not found"})
+}
+fs.writeFileSync("../backend/userInput.js",JSON.stringify(filtered, null, 2), "utf-8");
+return res.status(200).json({message:"deleted!!"})
+})
 
 
 express_app.listen(3000,()=>{

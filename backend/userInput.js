@@ -13,10 +13,5 @@
     "name": "LEATHER GUITAR STRAP",
     "price": "Price: $20",
     "qty": 2
-  },
-  {
-    "name": "GIBSON LES PAUL",
-    "price": "Price: $999",
-    "qty": "2"
   }
 ]

@@ -31,7 +31,7 @@ function retrievalData(){
             
                 <button onclick="Update(this)">Update</button>
                 </th>
-                <th><button>DELETE</button></th>
+                <th><button onclick="Delete(this)">DELETE</button></th>
                 </tr>`
                 
             });
@@ -66,4 +66,24 @@ function Update(btn){
     console.error(err)
   })
 
+}
+
+//delete 
+function Delete(btn){
+    const product=btn.closest(".product");
+    const name=product.querySelector(".name").innerText;
+    fetch("/cartDelete",{
+        method:"DELETE",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({name})
+    }).then(response=>{
+        if(response.status==200){
+            alert("deleted")
+            retrievalData()
+        }
+        else{
+            console.log("error Occured")
+        }
+    })
+    .error(err=>{console.error(err)})
 }
