@@ -26,3 +26,16 @@ The application includes basic CRUD operations for managing musical instrument p
 - **Read**: Users can browse and view the details of products.
 - **Update**: Admins can update product qty (e.g., name, description, price).
 - **Delete**: Admin
+
+
+Instrumental Shop: A full-stack e-commerce application for selling music gear, built with the MERN stack and Stripe for payments.
+
+Musical Instrument Shop: A design of an online musical instrument store where users can search and place orders for musical instruments online.
+
+Node.js Documentation: Official documentation for Node.js, a runtime environment for building server-side applications.
+
+Express.js Documentation: A minimal and flexible Node.js web application framework for building APIs and server-side applications.
+
+MongoDB: A NoSQL database, commonly used with Node.js for storing and managing product data.
+
+MDN Web Docs - JavaScript: Comprehensive resources and tutorials for learning JavaScript.
