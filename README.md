@@ -39,3 +39,7 @@ Express.js Documentation: A minimal and flexible Node.js web application framewo
 MongoDB: A NoSQL database, commonly used with Node.js for storing and managing product data.
 
 MDN Web Docs - JavaScript: Comprehensive resources and tutorials for learning JavaScript.
+
+Attribution:
+Zishan Hassan Khan (Help me with someproblems in the backend)
+Chat GPT: Used AI to help me create the Readme File. 
